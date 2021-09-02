@@ -1,6 +1,7 @@
 const http = require('http');
 const port = 3000;
 const fs = require('fs');
+const url = require('url');
 const {pool} = require('./dbConfig');
 
 const server = http.createServer();
@@ -15,14 +16,14 @@ function connection_handler(req, res){
     }
     else if (req.url === '/register'){
         let username = 'Andrew';
-        let password = 12345;
+        let password = '12345';
         let email = 'andrew@gmail.com';
         pool.query(`INSERT INTO users (username, password, email ) 
                     VALUES ($1, $2, $3) 
-                    RETURNING id, password`,[username, password, email ], (err, results)=>{
-                      if (err){
-                          throw err
-                      }
+                    RETURNING id, password`,[username, email, password], (err, results)=>{
+                        if (err){
+                            throw err
+                        } 
                     })
     }
 }
