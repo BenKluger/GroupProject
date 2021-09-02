@@ -7,7 +7,7 @@
     * Ability to direct message.
     * Ability to add friends.
     * Ability to have files/images embedded in posts.
-        * Chat filter. //Super important if mandated by college.
-        * Time out users if they send more than x messages per minute.
     * Seperate directories. Starting with just CS, every CS class has it's own directory.  
 * MUST HAVE the ability to ban a user profile/email from sending messages.
+   * Chat filter. //Super important if mandated by college.
+        * Time out users if they send more than x messages per minute.
